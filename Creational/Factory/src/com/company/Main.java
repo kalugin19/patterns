@@ -12,9 +12,9 @@ public class Main {
 
     private static Dialog getDialog(){
         String OS = System.getProperty("os.name").toLowerCase();
-        if (OS.equals(LINUX)){
+        if (OS.contains(LINUX)){
             return new LinuxDialog();
-        } else if (OS.equals(WINDOWS)){
+        } else if (OS.contains(WINDOWS)){
             return new WindowsDialog();
         } else {
             throw new RuntimeException("Unknown OS");

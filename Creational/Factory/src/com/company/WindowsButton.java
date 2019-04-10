@@ -16,14 +16,14 @@ public class WindowsButton  implements Button {
         JLabel label = new JLabel("Windows Button!");
         label.setOpaque(true);
         label.setBackground(new Color(235, 233, 126));
-        label.setFont(new Font("Dialog", Font.BOLD, 44));
+        label.setFont(new Font(Font.SANS_SERIF, Font.BOLD, 44));
         label.setHorizontalAlignment(SwingConstants.CENTER);
         panel.setLayout(new FlowLayout(FlowLayout.CENTER));
         frame.getContentPane().add(panel);
         panel.add(label);
         onClick();
         panel.add(button);
-        frame.setSize(320, 200);
+        frame.setSize(640, 400);
         frame.setVisible(true);
         onClick();
     }
@@ -31,6 +31,7 @@ public class WindowsButton  implements Button {
     @Override
     public void onClick() {
         button = new JButton("Exit");
+        button.setFont(new Font(Font.MONOSPACED, Font.BOLD, 43));
         button.addActionListener(e -> {
             frame.setVisible(false);
             System.exit(0);
