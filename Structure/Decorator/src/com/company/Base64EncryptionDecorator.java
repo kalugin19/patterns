@@ -3,9 +3,9 @@ package com.company;
 import java.nio.charset.StandardCharsets;
 import java.util.Base64;
 
-public class EncryptionDecorator extends DataSourceDecorator {
+public class Base64EncryptionDecorator extends DataSourceDecorator {
 
-    public EncryptionDecorator(DataSource wrapper) {
+    public Base64EncryptionDecorator(DataSource wrapper) {
         super(wrapper);
     }
 
