@@ -5,8 +5,7 @@ public class Main {
     public static void main(String[] args) {
         String text = "Text one two three six";
         DataSource baseDataSource = new DataSourceDecorator(new FileDataSource("out/OutputDemo.txt"));
-//        DataSource encryptionSource = new CompressionDecorator(new Aes256EncryptionDecorator(baseDataSource));
-        DataSource encryptionSource = new Aes256EncryptionDecorator(baseDataSource);
+        DataSource encryptionSource = new Base64EncryptionDecorator(baseDataSource);
         encryptionSource.writeData(text);
         System.out.println(encryptionSource.readData());
         DataSource plain = new FileDataSource("out/OutputDemo.txt");
